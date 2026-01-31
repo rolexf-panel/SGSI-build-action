@@ -28,6 +28,9 @@ jobs:
           required "${{ steps.config.outputs.version }}" "VERSION config"
           required "${{ steps.config.outputs.repack_name }}" "REPACK_NAME config"
 
+      - name: GitHub Workflow Cleaner Action
+        uses: rokibhasansagar/slimhub_actions@v25.42.5
+  
       - name: Initializing Environment
         run: |
           sudo apt-get install -y git wget git zip unzip curl axel
